@@ -74,8 +74,14 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Use pathlib for BASE_DIR
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',  
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_ecom_store',         
+        'USER': 'root',            
+        'PASSWORD': '@dmIn91#%p@ss01word',    
+        'HOST': 'localhost',                  
+        'PORT': '3306',                       
     }
 }
 

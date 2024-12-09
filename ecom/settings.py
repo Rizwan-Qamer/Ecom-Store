@@ -21,9 +21,7 @@ SECRET_KEY = 'django-insecure-x4m$gfeda-r+)u05g*bzm%8#_vz&8-wl^3epo45gqi#_eqwvtq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://djangotest.com', 'djangotest.com', 'django-ecommerce-production-81b6.up.railway.app', 'https://django-ecommerce-production-81b6.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://djangotest.com', 'https://django-ecommerce-production-81b6.up.railway.app']
-
+ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,7 +44,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ecom.urls'
@@ -120,9 +117,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = ['static/']
 
-# White noise static stuff
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# # White noise static stuff
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
 MEDIA_URL = 'media/'
@@ -135,8 +132,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Add paypal settings
-# Set sandbox to true
-PAYPAL_TEST = True
+# # Add paypal settings
+# # Set sandbox to true
+# PAYPAL_TEST = True
 
-PAYPAL_RECEIVER_EMAIL = 'business@codemytest.com' # Business Sandbox account
+# PAYPAL_RECEIVER_EMAIL = 'business@codemytest.com' # Business Sandbox account
